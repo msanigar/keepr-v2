@@ -19,6 +19,9 @@ const netlifyAuth = {
       netlifyIdentity.close();
     });
   },
+  closeModal() {
+    netlifyIdentity.close();
+  },
   signout(callback) {
     this.isAuthenticated = false;
     netlifyIdentity.logout();
