@@ -45,11 +45,10 @@ export default function Home() {
           <div>
             You are logged in!
             {user && <>Welcome {user?.user_metadata?.full_name}!</>}
-            <br />
-            <button onClick={logout} />
+            <button onClick={logout}>Logout</button>
           </div>
         ) : (
-          <button onClick={login}>Log in here.</button>
+          <button onClick={login}>Login</button>
         )}
       </div>
       <main>
