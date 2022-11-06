@@ -29,6 +29,7 @@ export default function Home() {
     netlifyAuth.initialize((user: User) => {
       setLoggedIn(!!user);
       setUser(user);
+      close();
     });
   }, [loggedIn]);
 
