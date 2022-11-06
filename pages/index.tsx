@@ -15,7 +15,10 @@ export default function Home() {
     netlifyAuth.authenticate((user: User) => {
       setLoggedIn(!!user);
       setUser(user);
-      netlifyAuth.closeModal();
+      setTimeout(() => {
+        // delay close til auth has happened
+        netlifyAuth.closeModal();
+      }, 1000);
     });
   };
 
